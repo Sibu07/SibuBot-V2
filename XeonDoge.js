@@ -3790,7 +3790,7 @@ break
         if (!q) return reply("What song is it?");
         let song = await hx.lirik(q);
         sendMediaURL(from, song.thumb, song.lirik);
-        break;
+        break
 				case 'numbers':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 				if (args.length < 1) return reply('The numbers?')
