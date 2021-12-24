@@ -3206,6 +3206,7 @@ NOTE : _DO NOT SELL BOT SCRIPT_
 ──────────────────
 *👇SCRIPT GITHUB LINK👇*
 https://github.com/Sibuuu07/SibuBot-V2
+My Instagram Account : https://www.instagram.com/sibssssssss/
 _BASE : Sibu Bot Inc._
 _ORI SCRIPT : 𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 Version 2_
 _OWNER : ${NamaOwner}_
