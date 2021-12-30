@@ -1936,6 +1936,7 @@ stamtus =`❏ 「 \`\`\`OTHER MENU\`\`\` 」
 😎 ${prefix}takestick [ name|author ]
 😎 ${prefix}dice
 😎 ${prefix}semoji [ emoji ]
+😎 ${prefix}emoji [emoji]
 😎 ${prefix}attp [text]
 😎 ${prefix}toimg
 😎 ${prefix}tomp3 [ reply video ]
@@ -3791,7 +3792,7 @@ break
         if (!q) return reply("What song is it?");
         let song = await hx.lirik(q);
         sendMediaURL(from, song.thumb, song.lirik);
-        break
+        break;
 				case 'numbers':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 				if (args.length < 1) return reply('The numbers?')
@@ -4632,6 +4633,15 @@ break
                     anu1 = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${c}`)
                     alpha.sendMessage(from, anu1, image, {quoted: mek, caption : `${prefix}sticker`})
                     break
+                    case "emoji":
+        if (!q) return fakegroup("the emoji?");
+        qes = args.join(" ");
+        emoji.get(`${qes}`).then((emoji) => {
+          teks = `${emoji.images[4].url}`;
+          sendStickerFromUrl(from, `${teks}`);
+          console.log(teks);
+        });
+        break;
 				case 'semoji':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 			if (args === 0) return reply('the emoji?')   
@@ -5259,7 +5269,6 @@ ytmp4 => Video`, contextInfo: { forwardingScore: 508, isForwarded: true, externa
             }
             break
 					case 'ytmp3':
-			case 'song':
               if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})
 						if (args.length === 0) return reply(`Send orders *${prefix}ytmp3 [linkYt]*`)
 						let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
